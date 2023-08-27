@@ -21,13 +21,14 @@
 
 - name: "Create sshd jail"
   ansible.builtin.template:
-    src: "../templates/fail2ban-sshd.conf.j2"
-    dest: "/etc/fail2ban/jail.d/sshd.conf"
+    src: fail2ban-sshd.conf.j2
+    dest: /etc/fail2ban/jail.d/sshd.conf
+    mode: 0644
   become: true
 
 - name: "Enable and start fail2ban service"
   ansible.builtin.systemd:
     name: fail2ban
     state: started
-    enabled: yes
+    enabled: true
   become: true
