@@ -2,6 +2,6 @@
 enabled = true
 backend = systemd
 
-findtime = 10m
-maxretry = 6
-bantime = 1d
+findtime = {{ f2b_sshd_findtime }}
+maxretry = {{ f2b_sshd_maxretry }}
+bantime = {{ f2b_sshd_bantime }}
