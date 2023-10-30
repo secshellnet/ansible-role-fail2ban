@@ -1,0 +1,4 @@
+---
+f2b_sshd_findtime: 10m
+f2b_sshd_maxretry: 6
+f2b_sshd_bantime: 1d
